@@ -68,6 +68,8 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "faiss-cpu" },
+    { name = "hf-xet" },
+    { name = "huggingface-hub", extra = ["hf-xet"] },
     { name = "numpy" },
     { name = "sentence-transformers" },
 ]
@@ -75,6 +77,8 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "faiss-cpu", specifier = ">=1.12.0" },
+    { name = "hf-xet", specifier = ">=1.1.10" },
+    { name = "huggingface-hub", extras = ["hf-xet"], specifier = ">=0.35.0" },
     { name = "numpy", specifier = ">=2.3.3" },
     { name = "sentence-transformers", specifier = ">=5.1.1" },
 ]
@@ -173,6 +177,11 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/37/79/d71d40efa058e8c4a075158f8855bc2998037b5ff1c84f249f34435c1df7/huggingface_hub-0.35.0.tar.gz", hash = "sha256:ccadd2a78eef75effff184ad89401413629fabc52cefd76f6bbacb9b1c0676ac", size = 461486, upload-time = "2025-09-16T13:49:33.282Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fe/85/a18508becfa01f1e4351b5e18651b06d210dbd96debccd48a452acccb901/huggingface_hub-0.35.0-py3-none-any.whl", hash = "sha256:f2e2f693bca9a26530b1c0b9bcd4c1495644dad698e6a0060f90e22e772c31e9", size = 563436, upload-time = "2025-09-16T13:49:30.627Z" },
+]
+
+[package.optional-dependencies]
+hf-xet = [
+    { name = "hf-xet" },
 ]
 
 [[package]]
